@@ -1,0 +1,36 @@
+
+.btn-purple {
+  background: linear-gradient(to right, #7e22ce, #9333ea);
+  color: white;
+  border: none;
+}
+
+.btn-purple:hover {
+  background: #6b21a8;
+}
+
+.card {
+  background-color: #1f172a !important;
+  border: none;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.bg-purple {
+  background-color: #a855f7;
+  color: white;
+}
+.gradient-text {
+  background: linear-gradient(
+      to right,
+      #8750f7 30%,
+      #ffffff 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  text-fill-color: transparent;
+  font-size:2.5rem;
+}

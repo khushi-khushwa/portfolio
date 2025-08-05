@@ -1,0 +1,273 @@
+
+
+<div style="background-color: #0f0715;">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" [ngClass]="{ 'navbar-scrolled': isScrolled }" style="background-color: #0f0715;">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#"></a>
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="navbar-nav flex-grow-1 text-white align-items-center">
+            <h5>khushikhushwah&#64;gmail.com</h5>
+          </div>
+          <ul class="navbar-nav ms-auto">
+            <ng-container *ngFor="let head of header">
+              <li class="nav-item p-2">
+                <a class="nav-link fw-semibold text-white" >{{ head.name }}</a>
+              </li>
+            </ng-container>
+            <!-- <button class="hirebtn ms-3">Hire Me</button> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BANNER SECTION -->
+  <div class="banner-section pt-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6 d-flex justify-content-center align-items-center text-white text-center text-lg-start">
+          <div>
+            <h1>I am Khushi</h1>
+            <p class="fw-bold" style="color: #8750f7; font-size: 1.2rem;">
+              Frontend Developer &nbsp; | &nbsp; UI/UX  &nbsp; | &nbsp; Graphic Designer
+            </p>
+            <p>
+              I’m a frontend developer focused on building modern, responsive web applications.
+              My portfolio showcases projects built with HTML, CSS, JavaScript, React, Angular, and Tailwind.
+            </p>
+            <div class="d-flex gap-3 align-items-center p-2">
+              <a href="assets/khushi_updated_resume.pdf" class="resume-btn text-decoration-none" download="Khushi_Kushwaha_Resume.pdf">Download resume <mat-icon style="color:#8750f7">play_for_work</mat-icon></a>
+              <!-- <button class="resume-btn">
+                Download resume <mat-icon style="color:#8750f7">play_for_work</mat-icon>
+              </button> -->
+              <!-- <a class="text-decoration-none" href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a class="text-decoration-none" href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a class="text-decoration-none" href="#"><i class="fa-brands fa-instagram"></i></a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+          <div class="style-image">
+            <img src="../../assets/profile.png" alt="my-image" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE SECTION -->
+<section class="experience-section py-5">
+  <div class="container">
+    <div class="heading mb-4 text-center">
+      <h1 class="gradient-text fw-bold mb-1 text-center">My Experience</h1>
+      <p >Internship & Freelancing Journey</p>
+    </div>
+
+    <div class="row text-white">
+      <!-- Internship -->
+      <div class="col-md-6 mb-4">
+        <div class="experience-card h-100">
+          <h5>Angular Developer Intern</h5>
+          <p class="mb-1 text-purple">Monet</p>
+          <p class="mb-1">Dec 2024 – June 2025</p>
+          <p>
+            Worked on creating responsive UIs using Angular and Bootstrap. 
+            Contributed to live projects, improved UI performance.
+            Used Angular and integrated APIs for dynamic user experiences.
+          </p>
+        </div>
+      </div>
+
+      <!-- Freelancing -->
+      <div class="col-md-6 mb-4">
+        <div class="experience-card h-100">
+          <h5  >Freelance</h5>
+          <p class="mb-1 text-purple">Remote</p>
+          <p class="mb-1">june 2022 – Present</p>
+          <p>
+            As Graphic Developer Make the poster, Certificate, IDcards, Medicine Labels.
+           
+          </p>
+          <p> As React Developer - make the Momhomes website and the Salasar website</p>
+        </div>
+      </div>
+    </div>
+
+  
+  </div>
+</section>
+
+  <!-- SERVICES SECTION -->
+  <div class="container">
+    <div class="heading">
+      <h4 class="gradient-text fw-bold mb-4 text-center" >What I do</h4>
+      <p>My Quality</p>
+    </div>
+
+    <div class="row text-white">
+      <div *ngFor="let first of services; let i = index" 
+           (mouseenter)="indexhover = i" 
+           (mouseleave)="indexhover = 0"
+           [ngClass]="{ 'row_design': indexhover == i, 'row_hoverdesign': indexhover !== i }">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-4">
+            <p class="mb-1">{{ i + 1 }}</p>
+            <h4>{{ first.name }}</h4>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-8">
+              <p class='mb-0'>{{ first.detail }}</p>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-end align-items-center">
+              <mat-icon class="pb-0">call_made</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-recent-pages></app-recent-pages>
+  <app-education></app-education>
+  <app-skills></app-skills>
+
+
+    <div class="text-center  my-5 pb-5">
+      <h5 class="text-white">Interested in working with me?</h5>
+      <p class="text-purple">Email: khushikhushwah&#64;gmail.com</p>
+      <p class="text-purple">Phone: 7011230208</p>
+      <a href="mailto:khushikhushwah&#64;gmail.com">
+        <button class="hirebtn mt-2">Let's Connect</button>
+      </a>
+    </div>
+</div>
+
+
+
+
+
+  <!-- <div class="container py-5">
+   <div class="text-center text-white">
+  <h1 class="pb-0 mb-0">MY Recent Work</h1>
+  <p class="pb-0 mb-0">I put my ideas and  build  unique web projects </p>
+   </div>
+  <div class="row">
+    <div class="col-lg-12">
+        <div class="accordion" id="accordionExample">
+           <div class="accordion-item">
+<h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+           </div>
+        </div>
+    </div>
+  </div>
+</div> -->
+
+    <!-- <div class="container">
+        <div class="row">
+           <div class="col-lg-3">
+             <span class="material-symbols-outlined">
+         design_services
+      </span>
+           </div>
+              <div class="col-lg-3">
+<span class="material-symbols-outlined">
+brush
+</span>
+           </div>
+              <div class="col-lg-3">
+<span class="material-symbols-outlined">
+gradient
+</span>
+           </div>
+              <div class="col-lg-3">
+
+           </div>
+        </div>
+    </div> -->
+
+    <!-- <div class="experience">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-6">
+                 <div>
+                   <h1>7 Month Experience</h1>
+                 </div>
+               </div>
+               <div class="col-lg-6">
+                   <div>
+                       <div class="d-flex">
+                           <div class="">
+                                <h3>2+</h3>
+                             <p>Freelance Projects</p>
+                           </div>
+                           <div class="">
+                                <h3>2+</h3>
+                             <p>React Projects</p>
+                           </div>
+                           
+                       </div>
+                       <div class="d-flex">
+                           <div class="">
+                                <h3>5+</h3>
+                             <p>Graphic Projects</p>
+                           </div>
+                           <div class="">
+                                <h3>2+</h3>
+                             <p>Angular Project</p>
+                           </div>
+                           
+                       </div>
+                       <div>
+
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </div> -->
+
+    <!-- <div>
+       <div class="container">
+           <div class="row">
+              <div class="col-lg-6">
+               <div>
+
+                   <h3>MY SKILL</h3>
+                   <h1>My Experts Areas Where I Gained Skill</h1>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est iusto, velit sed aliquam inventore laborum, repellat numquam sequi necessitatibus nostrum quos.</p>
+               </div>
+              </div>
+<div class="col-lg-6 d-flex gap-5">
+
+      <div>
+       <h4>Angular</h4>
+       </div>
+       <div>
+<h4>Javascript</h4>
+       </div>
+   
+</div>
+           </div>
+       </div>
+    </div> -->
