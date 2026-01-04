@@ -1,4 +1,4 @@
-<section class="py-5" style="background-color: #0b0214; color: white;">
+<section class="py-5" style="background-color: #0b0214; color: white;" id="Project">
   <div class="container text-center">
     <h2 class="gradient-text fw-bold mb-4 text-center">My Works</h2>
     <p class="text-white-30 mb-4">
@@ -18,6 +18,7 @@
       >
         {{ filter }}
       </button>
+       
     </div>
 
     <!-- Project Cards -->
@@ -36,6 +37,7 @@
       </div>
     </div> -->
   <div class="row">
+     
   <div class="col-md-6 mb-4" *ngFor="let project of filteredProjects">
     <a
       *ngIf="project.link"
@@ -52,8 +54,13 @@
         </div>
       </div>
     </a>
-    <!-- <div *ngIf="!project.link">
-      <div class="card bg-dark text-white h-100">
+    <div *ngIf="!project.link">
+     
+      <div class="card bg-dark text-white h-100" >
+      <!-- <div>
+          <button (click)="showphoto(btn.name)" class="text-white" *ngFor="let btn of Button">{{btn.name}}</button>
+       
+        </div> -->
         <img [src]="project.img" class="card-img-top" alt="Project Image" />
         <div class="card-body">
           <h5 class="card-title">{{ project.title }}</h5>
@@ -61,9 +68,13 @@
           <span class="badge bg-purple text-capitalize">{{ project.category }}</span>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
 
   </div>
 </section>
+
+<!-- <div>
+  <img src="assets/work/graphic/momlogo.jpg" />
+</div> -->

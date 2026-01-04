@@ -25,7 +25,7 @@ export class HomeComponent {
     {name:'About'},
     {name:'Project'},
     {name:'Education'},
-    {name:'skills'},
+    {name:'Skills'},
     
   ]
 
@@ -60,4 +60,16 @@ export class HomeComponent {
 
     }
   ]
+
+scrollTo(sectionId: string) {
+  console.log(sectionId)
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+}
+
 }

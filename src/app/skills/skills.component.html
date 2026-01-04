@@ -1,12 +1,39 @@
-<div class="container py-5">
-      <h2 class="gradient-text fw-bold mb-5 text-center">My Skills</h2>
-  <div class="row ">
-    <ng-container *ngFor="let skill of skills">
-      <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4 text-center">
-        <img [src]="skill.image" class="img-fluid mb-2 skill-img" alt="{{ skill.skill }}" />
-        <p class="mb-0 text-white">{{ skill.skill }}</p>
+<div class="container py-5" id="Skills">
+  <h2 class="gradient-text fw-bold mb-5 text-center">My Skills</h2>
+
+  <div class="row">
+    <!-- LEFT COLUMN -->
+    <div class="col-lg-6 ">
+      <h2 class="typeskill">Coding </h2>
+      <div class="row px-5 mx-5">
+        <ng-container *ngFor="let skill of skills">
+          <div class="col-4 mb-4 text-center">
+            <img
+              [src]="skill.image"
+              class="img-fluid mb-2 skill-img"
+              alt="{{ skill.skill }}"
+            />
+            <p class="mb-0 text-white">{{ skill.skill }}</p>
+          </div>
+        </ng-container>
       </div>
-    </ng-container>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-lg-6">
+      <h2 class=" typeskill">Graphic  </h2>
+      <div class="row px-5 mx-5">
+        <ng-container *ngFor="let skill of graphics">
+          <div class="col-4 mb-4 text-center">
+            <img
+              [src]="skill.image"
+              class="img-fluid mb-2 skill-img"
+              alt="{{ skill.skill }}"
+            />
+            <p class="mb-0 text-white">{{ skill.skill }}</p>
+          </div>
+        </ng-container>
+      </div>
+    </div>
   </div>
 </div>
-

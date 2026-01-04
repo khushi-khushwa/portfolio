@@ -1,47 +1,18 @@
-<section class="py-5" style="background-color: #000; color: #fff;">
+<section class="py-5" style="background-color: #000; color: #fff;" id="Education">
   <div class="container">
+    <h1 class="gradient-text fw-bold mb-4 text-center">My Education</h1>
+
     <div class="row">
-
-     
-      <h1 class="gradient-text fw-bold mb-4 text-center">
-  My Education
-</h1>
-<div class="col-md-6 mb-5">
-        <div *ngFor="let edu of education; let i = index" class="card mb-3" style="background-color: #1f172a; color: white;">
-          <div class="card-body" *ngIf="i< 2">
-            <h6 class="card-subtitle mb-1" style="color: #a855f7;">{{ edu.date }}</h6>
+      <div class="col-md-6 mb-5" *ngFor="let column of [0,1]">
+        <div *ngFor="let edu of education | slice:(column*2):(column*2+2)" 
+             class="card mb-3" style="background-color:#1f172a; color:white;">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-1" style="color:#a855f7;">{{ edu.date }}</h6>
             <h5 class="card-title fw-bold">{{ edu.title }}</h5>
             <p class="card-text">{{ edu.subtitle }}</p>
           </div>
         </div>
       </div>
-      <!-- Education -->
-      <div class="col-md-6 mb-5">
-      
-        <div *ngFor="let edu of education; let i = index" class="card mb-3" style="background-color: #1f172a; color: white;">
-          <div class="card-body"  *ngIf="i< 2">
-            <h6 class="card-subtitle mb-1" style="color: #a855f7;">{{ edu.date }}</h6>
-            <h5 class="card-title fw-bold">{{ edu.title }}</h5>
-            <p class="card-text">{{ edu.subtitle }}</p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
-
-
- <!-- Experience -->
-      <!-- <div class="col-md-6 mb-5">
-        <h2 class="text-purple fw-bold mb-4">
-          💼 <span style="color: #a855f7;">My Experience</span>
-        </h2>
-        <div *ngFor="let exp of experiences" class="card mb-3" style="background-color: #1f172a; color: white;">
-          <div class="card-body">
-            <h6 class="card-subtitle mb-1" style="color: #a855f7;">{{ exp.date }}</h6>
-            <h5 class="card-title fw-bold">{{ exp.title }}</h5>
-            <p class="card-text">{{ exp.address }}</p>
-          </div>
-        </div>
-      </div> -->

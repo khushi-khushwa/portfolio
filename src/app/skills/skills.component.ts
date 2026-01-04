@@ -34,4 +34,16 @@ export class SkillsComponent {
       image:'assets/logo/mongodb.png'
     },
   ]
+
+  graphics=[
+    { skill:'Corel Draw',
+      image:"assets/corel.png"
+    },
+      { skill:'Illustrator',
+      image:"assets/illustrator.png"
+    },
+      { skill:'Photoshop',
+      image:"assets/photoshop.png"
+    },
+  ]
 }

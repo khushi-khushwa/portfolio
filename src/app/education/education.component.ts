@@ -16,7 +16,7 @@ export class EducationComponent {
   education = [
     { date: '2025 – present', title: 'MCA', subtitle: 'MDU University' },
     { date: 'June 2020 – June 2023', title: 'BCA', subtitle: 'IGNOU University' },
+    { date: ' Dec-2021', title: 'Grpahic Design and Web development', subtitle: 'Arena Animation' },
     { date: '2017 – 2018', title: '12 Grade', subtitle: 'C.D. International School' },
-    { date: '2015 – 2016', title: '10 Grade', subtitle: 'Vikas se. sec. school' },
   ];
 }

@@ -85,21 +85,53 @@ filters = ['App', 'UX/UI', 'Graphics'];
       img:'assets/work/graphic/momlogo.jpg',
       description: ''
     },
-    //  {
-    //   title: 'Grow Your Business',
-    //   category: 'UX/UI',
-    //   img:'assets/all/survey.png',
-    //   description: 'We design beautiful experiences and help your business grow.'
-    // },
+    {
+      title: 'Momhomes logo',
+      category: 'Graphics',
+        link:'',
+      img:'assets/work/graphic/matchpost.png',
+      description: ''
+    },
+    {
+      title: 'Momhomes logo',
+      category: 'Graphics',
+        link:'',
+      img:'assets/work/graphic/asclogo.jpg',
+      description: ''
+    },
+    {
+      title: 'Momhomes logo',
+      category: 'Graphics',
+        link:'',
+      img:'assets/work/graphic/certificate2.jpg',
+      description: ''
+    },
+  
     
   ];
+
+
+  Button = [
+    {name:"certificate"},
+    {name:"logo"},
+    {name:"labels"},
+    {name:"poster"}
+  ]
 get filteredProjects() {
     return this.projects.filter(
+    
       project => project.category.toLowerCase() === this.selectedFilter.toLowerCase()
     );
   }
 
   selectFilter(filter: string) {
+    console.log(filter)
     this.selectedFilter = filter;
   }
+
+  showphoto(name){
+ console.log(name)
+  }
+
+
 }
